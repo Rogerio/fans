@@ -1,0 +1,72 @@
+<div class="row">
+
+	<%= nested_form_for [:admin, @news_article], :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
+		<div class="span12">
+			<%= error_messages_for @news_article %>
+		</div>
+		<div class="control-group">
+		  <%= f.label :section_id, :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.collection_select(:section_id, @sections, :id, :name, {:prompt => true}) %>
+		  </div>
+		</div>
+
+		<div class="control-group">
+		  <%= f.label :overline, :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.text_field :overline %>
+		  </div>
+		</div>
+
+		<%= f.fields_for :photos do |photos_form|%>
+			<div class="well">	
+				<div class="control-group">
+			    <%= photos_form.label :caption, :class => 'control-label' %>
+			    <div class="controls">
+			      <%= photos_form.text_field :caption, :class => 'text_area' %>
+			    </div>
+			  </div>
+		
+				<div class="control-group">
+					<%= photos_form.label :picture, :class => "control-label" %>
+					<div class="controls">
+						<%= photos_form.file_field :picture %>
+						<%= photos_form.link_to_remove "[-] Remove this photo", :class => "btn btn-danger"  %>
+					</div>
+				</div>
+			</div>
+		<% end %>
+  
+		<div class="control-group">
+			<div class="controls">
+		 		<%= f.link_to_add "[+] Add a photo", :photos, :class => "btn" %>
+			</div>
+		</div>
+
+	  <div class="control-group">
+	    <%= f.label :head, :class => 'control-label' %>
+	    <div class="controls">
+	      <%= f.text_field :head, :class => 'input-xxlarge' %>
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <%= f.label :subhead, :class => 'control-label' %>
+	    <div class="controls">
+	      <%= f.text_field :subhead, :class => 'input-xxlarge' %>
+	    </div>
+	  </div>
+
+	  <div class="control-group">
+	    <%= f.label :body, :class => 'control-label' %>
+	    <div class="controls">
+	      <%= f.cktext_area :body, :toolbar => 'MyToolbar', :height => 400, :class => 'text_area' %>
+			</div>
+	  </div>
+
+	  <div class="form-actions">
+	    <%= f.submit nil, :class => 'btn btn-primary' %>
+	    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+	                admin_news_articles_path, :class => 'btn' %>
+	  </div>
+	<% end %>
+</div>

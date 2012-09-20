@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <title>Fanapolis</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<div class="navbar navbar-inverse navbar-static-top">
+		<div class="navbar-inner">
+    	<div class="container">
+      	<a class="btn btn-navbar" data-toggle="collapse" data-target=".subnav-collapse">
+        	<span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      	</a>
+
+      	<a class="brand" href="/admin/news_articles">Dashboard | Folha de Anápolis</a>
+	      <div class="nav-collapse subnav-collapse">
+					<div class="container">
+						<%= link_to "Publicar notícia", new_admin_news_article_path, :class => "btn btn-primary" %>
+						<ul class="nav pull-right">
+							<li style="padding-bottom:5px; margin-top:10px"><%= link_to('<i class="icon-off"></i>Logout'.html_safe, destroy_reporter_session_path, :method => 'delete') %></li>
+							<li><%= link_to gravatar_image_tag(current_reporter.email), "#{}" %></a></li>
+						</ul>
+					</div>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div><!-- /navbar-inner -->
+	</div><!-- /navbar-inverted -->
+	
+	<div class="container">
+		<%= flash_messages %>
+		<%= yield %>
+	</div>
+</body>
+</html>

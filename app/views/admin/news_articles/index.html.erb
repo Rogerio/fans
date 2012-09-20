@@ -1,0 +1,34 @@
+<%- model_class = NewsArticle -%>
+<div class="page-header">
+  <h4><%=t '.title', :default => model_class.model_name.pluralize %></h4>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%=t model_class.human_attribute_name(:head) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @news_articles.each do |news_article| %>
+      <tr>
+        <td><h4><%= link_to news_article.head, news_article_path(news_article) %></h4>
+	        <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_admin_news_article_path(news_article), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      admin_news_article_path(news_article),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+				</td>
+
+        <td><%=l news_article.created_at %></td>
+        <td>
+
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @posts, :previous_label => "<", :next_label => ">" %>

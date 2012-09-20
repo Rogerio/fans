@@ -1,0 +1,62 @@
+      <!-- Headline block -->
+			<div class="row">
+        <div class="span12">
+          <div class="row">
+						<div class="span8">
+							<div class="row">
+								<div class="span2">							
+									<% @headlines.each do |headline| %>
+											<h6><%= link_to headline.head, news_article_path(headline) %></h6>
+									<% end %>
+								</div>
+								<div class="span6">
+									<%= link_to image_tag(@headline.photos.first.picture.url), news_article_path(@headline) %>
+									<h2><%= link_to @headline.head, news_article_path(@headline) %></h2>
+									<p><%= @headline.subhead %></p>
+								</div>
+							</div>
+						</div>
+						<div class="span4">
+							<%= link_to image_tag("/assets/folha_pdf.jpg", :title => "Baixe a edição impressa da Folha de Anápolis", :class => "img-rounded"), "#", :class => "thumbnail" %>
+						</div>
+          </div>
+        </div>
+      </div>
+
+			<!-- End of headline block -->
+
+			<hr/>
+
+			<div class="row">
+				<div class="span12">
+					<div class="row">
+						<div class="span8" style="float:left">
+							<div class="row">
+								<% if @news_secondaries %>
+								<% @news_secondaries.each do |news_article| %>
+	  						<div class="span4 fixed_height">
+									<div>
+										<%= link_to image_tag(news_article.photos.first.picture.url(:thumbnail), :style => "float:left; margin-right:10px"), news_article_path(@headline) %>
+									</div>
+					  			<div>
+					  				<h6><%= news_article.section.name %></h6>
+					  				<h4><%= link_to news_article.head, news_article_path(news_article) %></h4>
+									</div>
+								</div>
+					  		<% end %>
+								<% end %>
+							</div>
+						</div>
+						<div class="span4">
+							<% if @news_articles %>
+							<% @news_articles.each do |news_article| %>
+							<h5><%= link_to news_article.head, admin_news_article_path(news_article) %></h3>
+							<% end %>
+							<% end %>
+						</div>
+					</div>
+  	    </div>
+			</div>
+			<!-- News Block -->
+
+			<!-- end news block -->
