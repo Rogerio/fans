@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Reporter.create!(
+  :name => "Rogério Alexandre",
+  :email => "rogerioaba@gmail.com",
+  :password => "123456"
+)
+
+%w(Política Economia Urbano Esporte Estilo Viver Comprar Navegar Lounge).each do |name|
+  Section.create!(:name => name)
+end
