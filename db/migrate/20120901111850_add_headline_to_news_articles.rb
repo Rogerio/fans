@@ -1,5 +1,5 @@
 class AddHeadlineToNewsArticles < ActiveRecord::Migration
   def change
-    add_column :news_articles, :headline, :boolean, :default => 0
+    add_column :news_articles, :headline, :boolean, :default => false
   end
 end
