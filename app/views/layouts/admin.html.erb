@@ -6,7 +6,9 @@
   <![endif]-->
   <title>Fanapolis</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-
+	<script type="text/javascript">
+		var CKEDITOR_BASEPATH = '/assets/ckeditor/';
+	</script>
 	<%= javascript_include_tag 'ckeditor/ckeditor.js' %>
 	<%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
