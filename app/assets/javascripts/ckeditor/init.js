@@ -1,5 +1,5 @@
 (function() {
   if (typeof window['CKEDITOR_BASEPATH'] === "undefined" || window['CKEDITOR_BASEPATH'] === null) {
-    window['CKEDITOR_BASEPATH'] = "<%= Rails.application.config.action_controller.relative_url_root %>/assets/ckeditor/";
+    window['CKEDITOR_BASEPATH'] = "/assets/ckeditor/";
   }
 }).call(this);

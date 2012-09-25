@@ -18,3 +18,4 @@
 //= require jquery_nested_form
 //= require_tree .
 //= require ckeditor/init
+//= require ckeditor/ckeditor
