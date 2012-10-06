@@ -1,10 +1,5 @@
 Fanapolis::Application.routes.draw do
   
-  devise_for :reporters, :controllers => {
-    :sessions => "admin/sessions",
-    :password => "admin/passwords"
-  }
-
   resources :photos
 
   mount Ckeditor::Engine => '/ckeditor'
@@ -13,14 +8,11 @@ Fanapolis::Application.routes.draw do
   
   get "pages/index"
   
-  match '/teste'   => "pages#teste",   :as => :teste
-
   resources :pages
 
   namespace :admin do
     resources :sections
     resources :news_articles
-    resources :reporters, :except => [:show]
   end
 
   # The priority is based upon order of creation:

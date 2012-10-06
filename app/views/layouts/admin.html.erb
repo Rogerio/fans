@@ -30,8 +30,8 @@
 					<div class="container">
 						<%= link_to "Publicar notícia", new_admin_news_article_path, :class => "btn btn-primary" %>
 						<ul class="nav pull-right">
-							<li style="padding-bottom:5px; margin-top:10px"><%= link_to('<i class="icon-off"></i>Logout'.html_safe, destroy_reporter_session_path, :method => 'delete') %></li>
-							<li><%= link_to gravatar_image_tag(current_reporter.email), "#{}" %></a></li>
+							<li style="padding-bottom:5px; margin-top:10px"><%= link_to('<i class="icon-off"></i>Logout'.html_safe, destroy_user_session_path, :method => 'delete') %></li>
+							<li><%= link_to gravatar_image_tag(current_user.email), "#" %></a></li>
 						</ul>
 					</div>
         </div><!-- /.nav-collapse -->

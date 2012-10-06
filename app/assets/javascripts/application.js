@@ -12,9 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
-//= require wysihtml5
-//= require bootstrap-wysihtml5
-//= require jquery_nested_form
-//= require_tree .
-//= require ckeditor/init
+//= require_directory .

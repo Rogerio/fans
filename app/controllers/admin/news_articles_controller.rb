@@ -3,7 +3,7 @@ class Admin::NewsArticlesController < ApplicationController
   layout 'admin'
 
   before_filter :load_resources, :only => [:new, :create, :edit, :update] 
-  before_filter :authenticate_reporter!
+
   
   def index
     @news_articles = NewsArticle.paginate(:page => params[:page], :per_page => 5)
