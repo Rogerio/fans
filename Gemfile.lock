@@ -38,7 +38,7 @@ GEM
     ckeditor (3.7.1)
       mime-types
       orm_adapter
-    cocaine (0.3.0)
+    cocaine (0.4.2)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -77,7 +77,7 @@ GEM
     nested_form (0.2.3)
     nokogiri (1.5.5)
     orm_adapter (0.4.0)
-    paperclip (3.1.4)
+    paperclip (3.2.0)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -147,11 +147,11 @@ DEPENDENCIES
   bootstrap-wysihtml5-rails
   ckeditor (= 3.7.1)
   coffee-rails (~> 3.2.1)
-  devise
+  devise (= 2.1.2)
   jquery-rails
-  nested_form
+  nested_form (= 0.2.3)
   nokogiri
-  paperclip
+  paperclip (= 3.2.0)
   rails (= 3.2.8)
   sass-rails (~> 3.2.3)
   sqlite3

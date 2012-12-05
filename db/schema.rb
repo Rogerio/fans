@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120919140408) do
+ActiveRecord::Schema.define(:version => 20121205183236) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -28,9 +28,6 @@ ActiveRecord::Schema.define(:version => 20120919140408) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
-
-# Could not dump table "news" because of following StandardError
-#   Unknown type 'reference' for column 'section_id'
 
   create_table "news_articles", :force => true do |t|
     t.string   "head"
@@ -59,9 +56,9 @@ ActiveRecord::Schema.define(:version => 20120919140408) do
 
   create_table "reporters", :force => true do |t|
     t.string   "name"
-    t.string   "email",                  :default => "", :null => false
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"

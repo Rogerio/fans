@@ -6,7 +6,7 @@
   <![endif]-->
   <title>Fanapolis</title>
   <%= stylesheet_link_tag    "admin", :media => "all" %>
-	<%= javascript_include_tag "application" %>
+	<%= javascript_include_tag "admin" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -22,6 +22,7 @@
       	</a>
 
       	<a class="brand" href="/admin/news_articles">Dashboard | Folha de Anápolis</a>
+				<% if reporter_signed_in? %>
 	      <div class="nav-collapse subnav-collapse">
 					<div class="container">
 						<%= link_to "Publicar notícia", new_admin_news_article_path, :class => "btn btn-primary" %>
@@ -31,6 +32,7 @@
 						</ul>
 					</div>
         </div><!-- /.nav-collapse -->
+				<% end %>
       </div>
     </div><!-- /navbar-inner -->
 	</div><!-- /navbar-inverted -->

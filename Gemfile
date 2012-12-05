@@ -24,12 +24,12 @@ end
 gem 'jquery-rails'
 
 gem "ckeditor", "3.7.1"
-gem "paperclip"
-gem "devise"
+gem "paperclip", "3.2.0"
+gem "devise", "2.1.2"
 
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-gem 'nested_form'
+gem 'nested_form', "0.2.3"
 
 gem 'nokogiri'
 

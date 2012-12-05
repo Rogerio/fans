@@ -1,5 +1,5 @@
 Fanapolis::Application.routes.draw do
-  
+
   devise_for :reporters, :controllers => {
     :sessions => "admin/sessions",
     :password => "admin/passwords"
