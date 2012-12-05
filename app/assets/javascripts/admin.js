@@ -12,4 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/fans
+//= require twitter/bootstrap
+//= require jquery_nested_form
+//= require_tree .
+//= require ckeditor/init
