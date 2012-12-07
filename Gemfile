@@ -13,8 +13,6 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'twitter-bootstrap-rails'
-  gem 'bootstrap-wysihtml5-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
@@ -27,7 +25,8 @@ gem "ckeditor", "3.7.1"
 gem "paperclip", "3.2.0"
 gem "devise", "2.1.2"
 
-gem 'will_paginate'
+gem 'twitter-bootstrap-rails', '2.1.3'
+gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
 gem 'nested_form', "0.2.3"
 
