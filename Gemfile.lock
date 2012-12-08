@@ -153,6 +153,7 @@ DEPENDENCIES
   devise (= 2.1.2)
   jquery-rails
   nested_form (= 0.2.3)
+  nokogiri
   paperclip (= 3.2.0)
   pg
   rails (= 3.2.8)

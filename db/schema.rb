@@ -11,11 +11,8 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20121002203133) do
-=======
+
 ActiveRecord::Schema.define(:version => 20121205183236) do
->>>>>>> desenvolvimento
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -58,8 +55,7 @@ ActiveRecord::Schema.define(:version => 20121205183236) do
 
   add_index "photos", ["news_article_id"], :name => "index_photos_on_news_article_id"
 
-<<<<<<< HEAD
-=======
+
   create_table "reporters", :force => true do |t|
     t.string   "name"
     t.datetime "created_at",                             :null => false
@@ -79,7 +75,7 @@ ActiveRecord::Schema.define(:version => 20121205183236) do
   add_index "reporters", ["email"], :name => "index_reporters_on_email", :unique => true
   add_index "reporters", ["reset_password_token"], :name => "index_reporters_on_reset_password_token", :unique => true
 
->>>>>>> desenvolvimento
+
   create_table "sections", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false

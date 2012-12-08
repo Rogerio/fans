@@ -13,7 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 <<<<<<< HEAD
+<<<<<<< HEAD
 //= require_directory .
+=======
+//= require twitter/fans
+>>>>>>> desenvolvimento
 =======
 //= require twitter/fans
 >>>>>>> desenvolvimento

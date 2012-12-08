@@ -1,14 +1,12 @@
 Fanapolis::Application.routes.draw do
-<<<<<<< HEAD
-  
-=======
+
+
 
   devise_for :reporters, :controllers => {
     :sessions => "admin/sessions",
     :password => "admin/passwords"
   }
 
->>>>>>> desenvolvimento
   resources :photos
 
   mount Ckeditor::Engine => '/ckeditor'

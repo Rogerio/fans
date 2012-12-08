@@ -9,10 +9,5 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
-<<<<<<< HEAD:app/assets/stylesheets/application.css
- *= require_directory .
- */
-=======
  *= require_tree .
  */
->>>>>>> desenvolvimento:app/assets/stylesheets/admin/admin.css
