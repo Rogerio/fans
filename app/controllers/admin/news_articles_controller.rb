@@ -1,9 +1,10 @@
-class Admin::NewsArticlesController < ApplicationController
-
-  layout 'admin'
+class Admin::NewsArticlesController < Admin::AdminController
 
   before_filter :load_resources, :only => [:new, :create, :edit, :update] 
+<<<<<<< HEAD
 
+=======
+>>>>>>> desenvolvimento
   
   def index
     @news_articles = NewsArticle.paginate(:page => params[:page], :per_page => 5)

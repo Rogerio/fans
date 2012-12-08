@@ -32,19 +32,11 @@ GEM
     bcrypt-ruby (3.0.1)
     bootstrap-will_paginate (0.0.8)
       will_paginate
-<<<<<<< HEAD
-    bootstrap-wysihtml5-rails (0.3.1.1)
-      railties (>= 3.0)
     builder (3.0.3)
-    ckeditor (3.7.3)
-=======
-    builder (3.0.3)
-    cancan (1.6.8)
     ckeditor (3.7.1)
->>>>>>> 7a4de7d
       mime-types
       orm_adapter
-    cocaine (0.3.1)
+    cocaine (0.4.2)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -81,9 +73,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.19)
-    multi_json (1.3.6)
+    multi_json (1.4.0)
     nested_form (0.2.3)
-    nokogiri (1.5.5)
     orm_adapter (0.4.0)
     paperclip (3.2.0)
       activemodel (>= 3.0.0)
@@ -144,7 +135,7 @@ GEM
       less-rails (~> 2.2.3)
       railties (>= 3.1)
       therubyracer (~> 0.10.2)
-    tzinfo (0.3.33)
+    tzinfo (0.3.35)
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
@@ -156,36 +147,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
   bootstrap-will_paginate
-  bootstrap-wysihtml5-rails
-  ckeditor (= 3.7.3)
-=======
-  bootstrap-will_paginate (= 0.0.8)
-  cancan (= 1.6.8)
   ckeditor (= 3.7.1)
->>>>>>> 7a4de7d
   coffee-rails (~> 3.2.1)
   devise (= 2.1.2)
   jquery-rails
-<<<<<<< HEAD
-  nested_form
-  nokogiri
-  paperclip
+  nested_form (= 0.2.3)
+  paperclip (= 3.2.0)
   pg
   rails (= 3.2.8)
   sass-rails (~> 3.2.3)
   sqlite3
   thin
-  twitter-bootstrap-rails
-=======
-  nested_form (= 0.2.3)
-  nokogiri (= 1.5.5)
-  paperclip (= 3.1.4)
-  rails (= 3.2.8)
-  sass-rails (~> 3.2.3)
-  sqlite3
   twitter-bootstrap-rails (= 2.1.3)
->>>>>>> 7a4de7d
   uglifier (>= 1.0.3)
-  will_paginate (= 3.0.3)
+  will_paginate (~> 3.0)

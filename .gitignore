@@ -7,7 +7,6 @@
 .DS_STORE
 *.DS_STORE
 
-
 # Ignore bundler config
 /.bundle
 
@@ -18,4 +17,3 @@
 /log/*.log
 /tmp
 
-*.DS_Store

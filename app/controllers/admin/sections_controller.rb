@@ -1,4 +1,4 @@
-class Admin::SectionsController < ApplicationController
+class Admin::SectionsController < Admin::AdminController
 
   def index
     @sections = Section.all
