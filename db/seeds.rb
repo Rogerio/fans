@@ -14,6 +14,6 @@ Reporter.create!(
   :password => "123456"
 )
 
-%w(Política Economia Urbano Esporte Estilo Viver Comprar Navegar Lounge).each do |name|
+%w(POLÍTICA ECONOMIA URBANO ESPORTE ESTILO VIVER COMPRAR NAVEGAR CADERNO\ F).each do |name|
   Section.create!(:name => name)
 end

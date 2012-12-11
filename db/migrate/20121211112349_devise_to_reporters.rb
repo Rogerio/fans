@@ -1,5 +1,5 @@
-class AddDeviseToReporters < ActiveRecord::Migration
-  def self.up
+class DeviseToReporters < ActiveRecord::Migration
+  def up
     change_table(:reporters) do |t|
       ## Database authenticatable
       t.string :email,              :null => false, :default => ""
@@ -43,9 +43,11 @@ class AddDeviseToReporters < ActiveRecord::Migration
     # add_index :reporters, :confirmation_token,   :unique => true
     # add_index :reporters, :unlock_token,         :unique => true
     # add_index :reporters, :authentication_token, :unique => true
+
+
   end
 
-  def self.down
+  def down
     # By default, we don't want to make any assumption about how to roll back a migration when your
     # model already existed. Please edit below which fields you would like to remove in this migration.
     raise ActiveRecord::IrreversibleMigration
