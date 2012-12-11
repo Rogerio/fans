@@ -29,8 +29,8 @@
 					<div class="container">
 						<%= link_to "Publicar notícia", new_admin_news_article_path, :class => "btn btn-primary" %>
 						<ul class="nav pull-right">
-							<li style="padding-bottom:5px; margin-top:10px"><%= link_to('<i class="icon-off"></i>Logout'.html_safe, destroy_user_session_path, :method => 'delete') %></li>
-							<li><%= link_to gravatar_image_tag(current_user.email), "#" %></a></li>
+							<li style="padding-bottom:5px; margin-top:10px"><%= link_to('<i class="icon-off"></i>Logout'.html_safe, destroy_reporter_session_path, :method => 'delete') %></li>
+							<li><%= link_to gravatar_image_tag(current_reporter.email), "#" %></a></li>
 						</ul>
 					</div>
         </div><!-- /.nav-collapse -->
@@ -40,31 +40,6 @@
 	</div><!-- /navbar-inverted -->
 	
 	<div class="container">
-		
-		<div class="row">
-
-			<div class="span3">
-				<h1>Folha de Anápolis </h1>
-			</div>
-			<div class="span6">
-				<ul class="nav nav-pills" id="regionNav">
-					<li><a href="#">Início</a></li>
-					<li><a href="#">Folha</a></li>
-					<li><a href="#">Anápolis</a></li>
-					<li><a href="#">Goiás</a></li>
-					<li><a href="#">Brasil</a></li>
-					<li><a href="#">Mundo</a></li>
-				</ul>
-			</div>
-			<div class="span3" style="margin-top:20px;">
-				<div class="input-append">
-				  <input id="appendedInputButton" type="text">
-				  <button class="btn btn-buscar" type="button">Buscar</button>
-				</div>
-			</div>
-		</div>
-		
-		
 		<%= flash_messages %>
 		<%= yield %>
 	</div>

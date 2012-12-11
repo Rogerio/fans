@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(:version => 20121205183236) do
     t.string   "data_content_type"
     t.integer  "data_file_size"
     t.integer  "assetable_id"
-    t.string   "assetable_type",    :limit => 30
-    t.string   "type",              :limit => 30
+    t.string   "assetable_type",                  :limit => 30
+    t.string   "type",                            :limit => 30
     t.integer  "width"
     t.integer  "height"
     t.datetime "created_at",                      :null => false
