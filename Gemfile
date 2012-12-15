@@ -32,7 +32,11 @@ end
 gem 'jquery-rails'
 
 gem "ckeditor", "3.7.1"
-gem "paperclip", "3.2.0"
+gem "paperclip"
+
+gem "cocaine"
+
+
 gem "devise", "2.1.2"
 
 gem 'twitter-bootstrap-rails', '2.1.3'
